@@ -15,6 +15,7 @@ If you want to test other attribute networks,  you need to do the following thre
 3. Add the new test networks in the testnetworks.m function.
  
 [1] V. Krebs, "Books about US politics," unpublished, http://www.orgnet.com, 2004.
+
 [2] J. Leskovec and J. J. Mcauley, "Learning to discover social circles in ego networks," in Advances in neural information processing systems, 2012, pp. 539-547.
 
 Contact me: zhengshu56@126.com
