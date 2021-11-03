@@ -10,7 +10,7 @@
 function main
 objDim = [2];
 nObj=length(objDim);
-maxGens= [100];
+maxGens= [200];
 Maxg =length(maxGens);
 probName = {'polbooks'};
 probNum =size(probName, 2);
@@ -36,7 +36,7 @@ end
 function prob=Calculation(probName,edgefile,fileattributes,T,varDim,objDim,maxGens)
 runTimes = 3;
 moea = 'NSGA-II';
-workerNum = 4; % The number of labs
+workerNum = 11; % The number of labs
 spmd
     prob=testnetworks(probName,varDim,objDim);%set the problem
     for j= 1:runTimes
@@ -61,6 +61,6 @@ for i = 2:workerNum
 end
 prob = fun;
 runT=num2str(runTimes*workerNum);
-save(['D:\phd work\mywork2 attribute community detection one paper\CEMOEA public\results\', ['CEMOEA',probName,'_run',runT,'_',moea,'.mat']],'prob');
+save(['D:\CEMOEA public\results\', ['CEMOEA',probName,'_run',runT,'_',moea,'.mat']],'prob');
 
 end
